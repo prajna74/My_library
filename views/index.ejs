@@ -1,0 +1,11 @@
+<div class="container-content">
+    <h3>Recently added</h3>
+    <div class="display-content">
+    <% for(var i=0;i<books.length;i++){%>
+      <div class="display-content-inner">
+        <h3><%=books[i].title%></h3>
+        <a href="/books/show/<%=books[i].id%>"><img src="<%=books[i].coverImagePath%>" height="150" width="100" alt=""></a>
+      </div>
+        <%}%>
+    </div>
+</div>

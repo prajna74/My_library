@@ -1,0 +1,17 @@
+<div class="container">
+<h3><%=author.aname%></h3>
+<div class="btn-row">
+    <a href="/authors/edit/<%=author.id%>" class="btn btn-primary">Edit</a>
+    <a href="/authors/index" class="btn btn-info">Authors</a>
+</div>
+
+<h3>Books by <%=author.aname%></h3>
+<div class="display-author">
+<%for(var i=0;i<books.length;i++){%>
+    <br>
+    <div>
+      <a href="/books/show/<%=books[i].id%>"><img src="<%=books[i].coverImagePath%>" height="100" width="150" alt=""></a>
+    </div>
+    <%}%>
+</div>
+</div>

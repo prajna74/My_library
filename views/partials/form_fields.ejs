@@ -1,0 +1,40 @@
+<div class="form-row">
+<div class="form-item">
+    <label for="">Title</label>
+    <input type="text" name="title" value="<%=book.title%>" >
+</div>
+<div class="form-item">
+    <label for="">Author</label>
+    <select name="author">
+        <% for(var i=0;i<authors.length;i++){%>
+            <% if(authors[i].id === book.author){%>
+            <option selected value="<%=authors[i].id%>" label="<%=authors[i].aname%>"></option>
+            <%} else { %>
+                <option value="<%=authors[i].id%>" label="<%=authors[i].aname%>"></option>
+        <%}}%>
+        </select>
+</div>
+</div>
+
+<div class="form-row">
+<div class="form-item">
+    <label for="">Page Count</label>
+    <input type="number" min="1" name="pagecount" value="<%=book.pagecount%>" >
+</div>
+<div class="form-item">
+    <label for="">Published Date</label>
+    <input type="date" name="publishedDate" 
+    value="<%=book.publishedDate ==null?"":book.publishedDate.toISOString().split("T")[0]%>" >
+</div>
+</div>
+
+<div class="form-row">
+<div class="form-item-no-grow">
+    <label for="">Cover Image</label>
+    <input type="file" name="coverImage" value="<%=book.coverImagePath%>" >
+</div>
+<div class="form-item">
+    <label for="">Description</label>
+    <textarea name="description" id="" cols="10" rows="5"><%=book.description%></textarea>
+</div>
+</div>

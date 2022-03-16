@@ -1,0 +1,13 @@
+<div class="container">
+    <h3>Add author</h3>
+   <form action="/authors/<%=author.id%>?_method=PUT" method="post">
+    <div class="form-row">
+        <div class="form-item">
+       <input type="text" name="aname" value="<%=author.aname%>"/>
+    </div>
+    </div>
+       <div class="form-row form-row-end btn-row">
+       <button type="submit" class="btn btn-info">Update</button>
+    </div>
+   </form>
+</div>

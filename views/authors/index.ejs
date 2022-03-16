@@ -1,0 +1,27 @@
+<div>
+    <div>
+        <form action="/authors/index" method="GET">
+            <div class="form-row">
+                <div class="form-item">
+            <label for="">Search author</label>
+            <input type="text" name="name" value="<%= searchOptions.name %>">
+           </div>
+        </div>
+        <div class="form-row form-row-end btn-row">
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+        </form>
+    </div>
+    <% for(var i=0;i<authors.length;i++){%>
+        <div class="author-display-name">
+            <h3><%= authors[i].aname %></h3>
+            <div class="btn-row">
+            <a href="/authors/edit/<%=authors[i].id%>" type="button" class="btn btn-info">Edit</a>
+            <a href="/authors/view/<%=authors[i].id%>" type="button" class="btn btn-primary">View</a>
+            <form action="/authors/<%=authors[i].id%>?_method=DELETE" method="post">
+            <button  type="submit" class="btn btn-danger">Delete</a>
+            </form>
+        </div>
+        </div>
+        <%}%>
+</div>

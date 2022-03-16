@@ -1,0 +1,67 @@
+@import "shared/variables.css";
+@import "shared/header.css";
+@import "shared/formstyle.css";
+
+body{
+    background:linear-gradient(to right,var(--color-background-dark),var(--color-background-light));
+    color:white;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 20px;
+}
+.container{
+    margin: auto;
+    margin-bottom: 3rem;
+    max-width: 1200px;
+}
+.inner-container{
+
+    margin:2rem 2rem;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+.display-content{
+    display: flex;
+}
+.display-content-inner{
+    margin: 3rem;
+    padding:1rem;
+}
+.btn-row{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+}
+.btn-row > *{
+    margin-left: .5rem;
+}
+.btn-row > *:first-child{
+    margin-left: 0rem;
+}
+.display-author{
+    display: flex;
+    margin-top: 2rem;
+}
+.author-display-name{
+    display: flex;
+    justify-content: space-between;
+}
+.book-info{
+    display:flex;
+    margin-top: 2rem;
+}
+.btn-block{
+    display:block;
+    margin-top: 1rem;
+}
+.book-detail{
+    margin-left: 5rem;
+    color: var(--color-text-light);
+}
+.btn-row1{
+    display: flex;
+}
+.btn-row2{
+    align-items: center;
+}

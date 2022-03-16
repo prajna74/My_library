@@ -1,0 +1,27 @@
+<div class="container">
+<h3><%=books.title.toUpperCase()%></h3>
+<div class="book-info">
+<div>
+<div class="book-image">
+<img src="<%=books.coverImagePath%>" alt="" height="150" width="150"><br>
+</div>
+<div class="btn-block">
+<div class="btn-row1">
+<a href="/books/edit/<%=books.id%>" class="btn btn-info">Edit</a>
+<form action="/books/delete/<%=books.id%>?_method=DELETE" method="post">
+    <button type="submit" class="btn btn-danger" style="margin-left:1rem ;">Delete</button>
+</form>
+</div>
+<div class="btn-row2">
+<a href="/authors/view/<%=books.author%>" style="margin-top: 1rem;margin-left: 0.6rem;"class="btn btn-primary">View author</a>
+</div>
+</div>
+</div>
+<div class="book-detail">
+<h4>Author : <%=author.aname%></h4>
+<h4>Published Date : <%=books.publishedDate.toISOString().split("T")[0]%></h4>
+<h4>Page Count : <%=books.pagecount%></h4>
+<h4>Description : <%=books.description%></h4>
+</div>
+</div>
+</div>

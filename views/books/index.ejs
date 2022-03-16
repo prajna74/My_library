@@ -1,0 +1,35 @@
+<div class="container">
+    <div>
+        <h2>Search books</h2>
+        <form action="/books/index" method="get">
+            <div class="form-row">
+                <div class="form-item">
+            <label for="">Title</label>
+            <input type="text" name="book">
+           </div>
+            </div>
+            <div class="form-row">
+                <div class="form-item">
+            <label for="">Published Before</label>
+            <input type="date" name="pbefore">
+            </div>
+            <div class="form-item">
+            <label for="">Published After</label>
+            <input type="date" name="pafter">
+        </div>
+        </div>
+        <div class="form-row btn-row form-row-end">
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+        </form>
+    </div>
+    <div class="display-content">
+    <% for(var i=0;i<books.length;i++){%>
+    <div class="display-content-inner">
+        <h3><%=books[i].title%></h3>
+        <a href="/books/show/<%=books[i].id%>">
+        <img src="<%=books[i].coverImagePath%>" height="150" width="100" alt=""></a>
+    </div>
+      <%}%>
+</div>
+</div>
